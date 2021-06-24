@@ -1,10 +1,10 @@
-import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
+import { Entity, Column, CreateDateColumn, UpdateDateColumn, PrimaryGeneratedColumn } from "typeorm";
 import { v4 as uuid } from "uuid";
 
 @Entity("users")
 class User {
 
-  @PrimaryColumn()
+  @PrimaryGeneratedColumn('uuid')
   readonly id: string;
 
   @Column()
@@ -15,6 +15,9 @@ class User {
 
   @Column()
   admin: boolean;
+
+  @Column({ nullable: true })
+  password: string;
 
   @CreateDateColumn()
   created_at: Date;

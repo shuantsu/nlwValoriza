@@ -1,10 +1,10 @@
-import { Entity, PrimaryColumn, Column, CreateDateColumn, UpdateDateColumn } from "typeorm";
+import { Entity, Column, CreateDateColumn, UpdateDateColumn, PrimaryGeneratedColumn } from "typeorm";
 import { v4 as uuid } from "uuid";
 
 @Entity("tags")
 class Tag {
 
-  @PrimaryColumn()
+  @PrimaryGeneratedColumn('uuid')
   readonly id: string;
 
   @Column()

@@ -23,5 +23,30 @@
 
   [ X ] Não e permitido cadastrar elogios para usuário inválidos
 
-  [ ] O usuário precisa estar autenticado na aplicação
-  
+  [ X ] O usuário precisa estar autenticado na aplicação
+
+<br>
+
+# Configuração .env
+```
+TYPEORM_CONNECTION=
+TYPEORM_HOST=
+TYPEORM_USERNAME=
+TYPEORM_PASSWORD=
+TYPEORM_DATABASE=
+TYPEORM_PORT=
+# TYPEORM_SYNCHRONIZE=true
+TYPEORM_LOGGING=
+TYPEORM_MIGRATIONS=src/database/migrations/*.ts
+TYPEORM_MIGRATIONS_DIR=src/database/migrations
+TYPEORM_ENTITIES=src/entities/*.ts
+TYPEORM_ENTITIES_DIR=src/entities
+PORT=
+API_KEY=
+```
+
+# Geração da API KEY
+Executar o comando
+```
+node -e "console.log( require('crypto').randomBytes(256).toString('base64'))"
+```

@@ -2,3 +2,4 @@ node_modules
 .vscode
 .env
 ormconfig.json.old
+build
